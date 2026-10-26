@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./models:/app/models:ro
+    environment:
+      - MIN_WORKERS=1
+      - MAX_WORKERS=4
+      - WORKER_POLL_SECONDS=0.2
+    env_file:
+      - path: .env
+        required: false

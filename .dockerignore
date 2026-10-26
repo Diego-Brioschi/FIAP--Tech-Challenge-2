@@ -1,0 +1,9 @@
+.venv
+.idea
+__pycache__
+.pytest_cache
+.env
+*.pyc
+.git
+logs
+reports/*.docx
